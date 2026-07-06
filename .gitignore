@@ -1,0 +1,34 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Editor and OS specific files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Machine Learning models (binary model weights - large files)
+data/*.pkl
+*.pkl
+
+# Generated prediction outputs
+data/hybrid_predictions.csv
+
+# Generated charts and visualizations
+data/*.png
+*.png
+
+# Intermediate benchmarking results
+data/benchmark_results.json
