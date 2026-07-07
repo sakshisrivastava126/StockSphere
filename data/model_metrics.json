@@ -1,0 +1,8 @@
+{
+  "model_name": "LightGBM",
+  "wape": 13.55,
+  "mae": 2.0062,
+  "business_cost": 731.91,
+  "last_trained_date": "2026-04-07",
+  "feature_count": 54
+}

@@ -939,6 +939,19 @@ def main():
     print(f"  Reactivity  → {REACTIVITY_CHART}")
     print(f"  Importance  → {IMPORTANCE_CHART}")
 
+    # Save metrics to json for backend
+    metrics_json = {
+        "model_name": "LightGBM",
+        "wape": gbm_m["wape"],
+        "mae": gbm_m["mae"],
+        "business_cost": gbm_m["biz_cost"],
+        "last_trained_date": meta["saved_at"][:10] if "saved_at" in meta else datetime.now().strftime("%Y-%m-%d"),
+        "feature_count": len(feature_cols)
+    }
+    with open(DATA_DIR / "model_metrics.json", "w") as f:
+        json.dump(metrics_json, f, indent=2)
+    print(f"  Metrics     → {DATA_DIR / 'model_metrics.json'}")
+
     # Summary
     print("\n" + "=" * 72)
     print("  SUMMARY: REACTIVE ENGINE vs OLD RF")
